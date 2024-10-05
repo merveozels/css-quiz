@@ -46,6 +46,9 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+ol{
+  padding: 0;
+}
 
 
 /*! start here */
@@ -126,6 +129,7 @@ input[type="radio"]:checked {
 
 
 @media (width <= 1200px){
+
   ol{
     display: grid;
     gap: 15px 25px;
@@ -135,6 +139,7 @@ input[type="radio"]:checked {
     padding-bottom: 25px;
     padding-top: 25px;
   }
+
   li{
     gap: 10px;
     background-color: #606c38;
@@ -149,9 +154,10 @@ input[type="radio"]:checked {
   
 }
 @media (width <= 700px){
+
   ol{
     display: grid;
-    gap: 15px 25px;
+    gap: 15px ;
     list-style: none;
     grid-template-columns: auto;
     justify-content: center;
@@ -159,6 +165,7 @@ input[type="radio"]:checked {
     padding-bottom: 25px;
     padding-top: 25px;
   }
+
   li{
     gap: 10px;
     background-color: #606c38;
@@ -167,9 +174,11 @@ input[type="radio"]:checked {
     display: flex;
     flex-direction: column;
     text-align: left;
-    max-width:320px ;
+    justify-content: center;
+    max-width: 320px ;
     font-weight: 500;
   }
+
   .submit-content{
     display: flex;
     justify-content: center;
