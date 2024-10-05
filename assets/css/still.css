@@ -1,0 +1,179 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #283618;
+  font-family: "DM Sans", system-ui;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+/*! start here */
+
+h1{
+  display: flex;
+  justify-content: center;
+  color: #fefae0;
+  font-weight: 700;
+  margin-top: 25px;
+  text-align: center;
+}
+
+ol{
+  display: grid;
+  gap: 15px 25px;
+  list-style: none;
+  grid-template-columns: 450px 450px;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+li{
+  gap: 10px;
+  background-color: #606c38;
+  color: #fefae0;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width:550px ;
+  font-weight: 500;
+}
+
+.input-inner label{
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.input-inner{
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-content{
+  display: flex;
+  justify-content: center;
+  margin-left: 35px;
+  margin-bottom: 50px;
+}
+
+.submit {
+  background-color:#dda15e;
+  color: #fefae0;
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  font-size: 18px; 
+  font-weight: 600;
+  cursor: pointer; 
+}
+/* secimi turuncu yapmak */
+
+input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fefae0; 
+  border-radius: 50%; 
+  padding: 3px;
+}
+
+input[type="radio"]:checked {
+  background-color: #bc6c25; 
+}
+
+
+@media (width <= 1200px){
+  ol{
+    display: grid;
+    gap: 15px 25px;
+    list-style: none;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  li{
+    gap: 10px;
+    background-color: #606c38;
+    color: #fefae0;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width:550px ;
+    font-weight: 500;
+  }
+  
+}
+@media (width <= 700px){
+  ol{
+    display: grid;
+    gap: 15px 25px;
+    list-style: none;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  li{
+    gap: 10px;
+    background-color: #606c38;
+    color: #fefae0;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width:320px ;
+    font-weight: 500;
+  }
+  .submit-content{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+}
