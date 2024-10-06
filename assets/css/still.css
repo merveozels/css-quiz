@@ -186,3 +186,12 @@ input[type="radio"]:checked {
     margin-bottom: 50px;
   }
 }
+
+/* background rengini değiştirmek */
+.solved li:has(.true:checked) {
+  background-color: green;  
+}
+
+.solved li:not(:has(.true:checked)) {
+  background-color: red;  
+}
